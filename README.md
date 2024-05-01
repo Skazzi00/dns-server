@@ -15,4 +15,6 @@ $ cargo build -r
 $ ./target/release/dns-server <path_to_dns_records>
 ```
 
+supporting only A and CNAME records
+
 Note: server starting on port 5353
