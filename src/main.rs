@@ -20,7 +20,7 @@ fn parse_file(file_path: &str) -> Vec<DnsRecord> {
             Ok(line) => line,
             Err(err) => panic!("Failed to read file: {err:?}")
         };
-        let mut splitted: Vec<String> = line.split_whitespace().map(|s| s.to_string()).collect();
+        let splitted: Vec<String> = line.split_whitespace().map(|s| s.to_string()).collect();
         if splitted.len() != 4 {
             continue;
         }
