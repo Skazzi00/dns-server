@@ -82,7 +82,7 @@ fn handle(socket: &UdpSocket, records: &Vec<DnsRecord>) -> Result<()> {
 
 fn main(){
     let args: Vec<String> = env::args().collect();
-    let file_path = "bind.example.txt";
+    let file_path = &args[1];
     let records = parse_file(file_path);
 
     let socket = match UdpSocket::bind(("0.0.0.0", 5353)) {
