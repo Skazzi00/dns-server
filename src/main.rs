@@ -90,6 +90,8 @@ fn main(){
         Err(err) => panic!("Failed to open socket: {err:?}"),
     };
 
+    println!("DNS server started");
+
     loop {
         handle(&socket, &records).expect("fail to handle");
     }
